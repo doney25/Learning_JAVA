@@ -1,34 +1,7 @@
 #include <stdio.h>
-
-void swap(int arr[], int i, int j) {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-
-int partition(int arr[], int low, int high) {
-    int pivot = arr[low];  
-    int end = low;
-
-    for (int j = low + 1; j <= high; j++) {
-        if (arr[j] < pivot) {
-            end++;
-            swap(arr, end, j);
-        }
-    }
-    swap(arr, low, end);  
-        return end;
-}
-
-void quickSort(int arr[], int low, int high) {
-    if (low < high) {
-        int q = partition(arr, low, high);
-
-        quickSort(arr, low, q - 1);
-        quickSort(arr, q + 1, high);
-    }
-}
-
+void swap();
+void quickSort();
+int partition();
 void main() {
     int limit, i;
     printf("Enter the limit: ");
@@ -47,4 +20,33 @@ void main() {
         printf("%d ", a[i]);
     }
 
+}
+
+void swap(int a[], int i, int j) {
+    int temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+}
+
+int partition(int a[], int low, int high) {
+    int pivot = a[low];  
+    int end = low;
+
+    for (int j = low + 1; j <= high; j++) {
+        if (a[j] < pivot) {
+            end++;
+            swap(a, end, j);
+        }
+    }
+    swap(a, low, end);  
+        return end;
+}
+
+void quickSort(int a[], int low, int high) {
+    if (low < high) {
+        int q = partition(a, low, high);
+
+        quickSort(a, low, q - 1);
+        quickSort(a, q + 1, high);
+    }
 }
