@@ -14,7 +14,7 @@ class myThreads extends Thread{
 	this.t=t;
 	}
 	public void run() {
-		System.out.println(Thread.currentThread().getPriority());
+		System.out.println("Priority of 5: "+Thread.currentThread().getPriority());
 		t.print(5);
 	}
 }
@@ -24,7 +24,7 @@ class myThread2 extends Thread{
 		this.t=t;
 	}
 	public void run() {
-		System.out.println(Thread.currentThread().getPriority());
+		System.out.println("Priority of 7: "+Thread.currentThread().getPriority());
 		t.print(7);
 	}
 }
