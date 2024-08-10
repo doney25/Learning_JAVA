@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int a,b,c;
+		System.out.print("Enter variable of x^2: ");
+		a=sc.nextInt();
+		System.out.print("enter VAriable of x^1: ");
+		b=sc.nextInt();
+		System.out.print("Enter VAriable of x^0: ");
+        c=sc.nextInt();
+	    double r1,r2;
+	    r1=(-b+Math.sqrt(b*b-(4*a*c)))/(2*a);
+	    r2=(-b-Math.sqrt(b*b-(4*a*c)))/(2*a);
+	    System.out.println("(x-"+r1+")"+" and (x-"+r2+")");
+	}
+}
