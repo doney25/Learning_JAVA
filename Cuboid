@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    int l,b,h;
+		System.out.println("Enter Length, Breadth, Height: ");
+		l=sc.nextInt();
+		b=sc.nextInt();
+		h=sc.nextInt();
+		System.out.println("Surface Area of cuboid is "+(l*b+l*h+b*h)*2);
+		System.out.println("Volume of cuboid is "+l*b*h);
+	}
+}
